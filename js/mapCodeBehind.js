@@ -1,4 +1,4 @@
-var mymap = L.map('mapid').setView([-34.6037, -58.3816], 13);
+﻿var mymap = L.map('mapid').setView([-34.6037, -58.3816], 13);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -33,4 +33,20 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
+
+/* NAVIGATION BAR */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+/* FINALLY */
+openNav();
 
